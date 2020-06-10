@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<title>Generator BZ</title>
+</head>
+<body bgcolor="#F6F8DE" text="#24478B">
+<i><b>Generator za tiskanje priznanj za bralno značko.</b></i><br><br>
+<!-- The data encoding type, enctype, MUST be specified as below -->
+
+<form enctype="multipart/form-data" action="generiraj.php" method="POST">
+   <span title="To je samo varnostno vprašanje"><small><i>Akronim za cobiss siglo 51371 je:</i></small></span>
+   <input type="text" name="geslo" size=5/></br>
+    <!-- MAX_FILE_SIZE must precede the file input field -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    <!-- Name of input element determines name in $_FILES array -->
+    Seznam učencev: <input name="userfile" type="file"  accept="text/comma-separated-values,.csv,.CSV" />
+    </br><input type="submit" value="Generiraj PDF" />
+</form>
+
+<small>
+</br></br>Navodila za uporabo:
+<oi>
+<li>Pridobi podatke učencih v tabelarični obliki (npr: iz eA ali Lopolisa)</li>
+<li>Odpri podatke v urejevalniku tabel (M$ Excel, LibreOffice Calc,...)</li>
+<li>Poskrbi da so podatki v tabeli v sledečem zaporedju:<br>
+| ime | priimek | razred. oddelek* | mentor | šolsko leto | šola |<br>
+<i> * 1-9 oz s za spominsko</i>
+<li>Preveri, da je v prvi vrstici opisi stolpcev nato sledijo podatki o učencih.</li>
+<li>Shrani podatke v .csv obliki (Datoteka->Shrani kot->Vrsta datoteke .CSV)</li>
+<li>Klikni prebrskaj</li>
+<li>izpolni varnostno vprašanje</li>
+<li>Klikni "Generiraj PDF"</li>
+<li>Odpri preneseno datoteko v PDF bralniku in jo nastisni brez prilagajanja listu</li>
+</ol>
+</br></br>
+<i>**V kolikor v PDF-u manjkajo podatki, ki vsebujejo šumnike</br>
+ pomeni, da ima .csv napačno kodiranje znakov.</br>
+.csv mora imet znake v UTF-8 obliki.</br>
+Primer odprave težavice: <a href="https://notepad-plus-plus.org/">Notepad++</a><br>
+Datoteka->odpri -> poišči prej generiran .csv</br>
+ -> Oblika <b>Pretovri</b> v UTF-8 -> Datoteka->Shrani.</i> -> Ponovno generiraj PDF.
+
+
+</br></br>
+<i>Poslani podatki se ne shranjujejo.</br>
+Za morebito uničenje listov ste odgovorni sami!<br>
+Koda generatorja spada pod GNU licenco in jo lahko snamete <a href="https://github.com/miharix/OS-bralna-znacka-generator">tukaj</a>.</br>
+Primer ustrezne <a href="bralna_primer.csv">.scv datoteke</a>.
+</i></small>
+
+</body>
+</html>
