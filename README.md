@@ -6,7 +6,7 @@ da se knjižničarke mučijo z tiskanjem potrdil bralnih značk, saj so [uradne 
 
 Pomoč računalničarja pri takem ponavljajočem opravilu je bila seveda potrebna vsako leto znova.
 
-Spisal sem tale generator, ki za vhodni podatek(.csv) vzame tabelo učencev/k (iz npr eA), ter generira PDF,
+Leta 2015 sem za knjižničarki spisal tale generator, ki za vhodni podatek(.csv) vzame tabelo učencev/k (iz npr eA), ter generira PDF,
  v katerem so podatki učencev na ustreznih mestih za izredno točen in ponovljiv izpis. 
 
 ## Postopek dela v grobem:
@@ -27,3 +27,5 @@ Spisal sem tale generator, ki za vhodni podatek(.csv) vzame tabelo učencev/k (i
 3.  Daj knjižničarki URL, kjer lahko dostopa do te strani
 
 Uganka **Akronim za cobiss siglo 51371 je:** je zato, da nebi kak boot sprožal generiranje PDF-a in z tem po nepotrebnem obrmenjeval strežnika
+
+PS: Generator vsebuje en za knjižničarko uporaben "Easter egg" *(namig: glej kodo v php)*
